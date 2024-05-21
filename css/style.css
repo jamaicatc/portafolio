@@ -53,6 +53,13 @@ nav ul li a:hover {
     text-decoration: underline; /* Color de fondo al pasar el ratón */
 }
 
+@media (max-width: 768px) {
+    nav ul li a {
+        padding: 6px 10px; /* Reducir el relleno dentro de los enlaces */
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+}
+
 section {
     padding: 10px 20px; /* Ajusta el padding para evitar solapamientos con la navbar fija */
     margin-top: 50px; /* Ajusta según la altura de la navbar */
