@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'RadioCanadaBig', sans-serif;
     scroll-behavior: smooth;
@@ -5,20 +11,11 @@ body {
     padding: 0;
 }
 
-body {
-    font-family: "Radio Canada Big", sans-serif;
-}
-
-.redes-sociales {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.redes-sociales li {
-    margin-right: 10px;
+#bars {
+    color: white;
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
 }
 
 nav {
@@ -28,6 +25,14 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 24px;
 }
 
 nav ul {
@@ -53,12 +58,47 @@ nav ul li a:hover {
     text-decoration: underline; /* Color de fondo al pasar el ratón */
 }
 
+
 @media (max-width: 768px) {
-    nav ul li a {
-        padding: 6px 10px; /* Reducir el relleno dentro de los enlaces */
-        font-size: 14px; /* Reducir el tamaño del texto */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: black;
     }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #bars {
+        display: block;
+        
+    }
+
 }
+
+
+.redes-sociales {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.redes-sociales li {
+    margin-right: 10px;
+}
+
 
 section {
     padding: 10px 20px; /* Ajusta el padding para evitar solapamientos con la navbar fija */
@@ -83,6 +123,7 @@ section h1 {
     font-size: 34px;
     text-align: left;
 }
+
 
 .redes-sociales img{
     margin-top: 20px;
